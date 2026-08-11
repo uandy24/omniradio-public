@@ -2,7 +2,7 @@
 
 **One device. Many ways to listen, communicate, and explore radio.**
 
-OmniRadio is a modular radio and network-audio platform built around the ESP32-S3. It brings broadcast reception, internet audio, podcasts, audiobooks, local files, microphone input, and voice communication into one physical device with one consistent interface.
+OmniRadio is a **multi-source, multi-target radio and network-audio platform** built around the ESP32-S3. It brings broadcast reception, internet audio, podcasts, audiobooks, local files, microphone input, and voice communication into one physical device with one consistent interface, while keeping audio sources separate from their destinations.
 
 The project is under active development. Public documentation is available, but public firmware downloads and installation images are not yet published.
 
@@ -32,6 +32,8 @@ OmniRadio is not a collection of separate ESP32 demos placed behind one menu. Ev
 - The embedded **portal** handles configuration and management through a browser.
 
 This separation lets the firmware grow without giving every feature its own unrelated navigation, audio output, persistence, and configuration system.
+
+“Multi-source, multi-target” describes the architecture and available routing choices. It does not claim that every source can play simultaneously to every target; compatibility depends on codecs, transports, hardware, and the active mode.
 
 ## Capabilities
 
@@ -163,10 +165,10 @@ The documentation is being expanded directly from the firmware implementation.
 
 Completed:
 
-1. Getting Started before public firmware
-2. Overview and terminology
-3. FM Radio
-4. AM Radio
+1. [Getting Started before public firmware](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/)
+2. [Overview and terminology](https://uandy24.github.io/omniradio-public/concepts/terminology/)
+3. [FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)
+4. [AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)
 
 Next planned sections:
 
