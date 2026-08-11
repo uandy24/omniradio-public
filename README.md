@@ -189,12 +189,12 @@ Completed:
 14. [Audio targets and compatibility](https://uandy24.github.io/omniradio-public/targets/)
 15. [Physical UI and Canvas](https://uandy24.github.io/omniradio-public/ui/)
 16. [Embedded portal](https://uandy24.github.io/omniradio-public/portal/)
+17. [Battery and power status](https://uandy24.github.io/omniradio-public/power/)
 
 Next planned sections:
 
-1. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
-2. Connected hardware and complete configuration reference
-3. Wi-Fi, TLS, storage, and troubleshooting
-4. Installation and firmware distribution after N8R8 validation
+1. Connected hardware and complete configuration reference
+2. Wi-Fi, TLS, storage, and troubleshooting
+3. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
