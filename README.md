@@ -186,14 +186,14 @@ Completed:
 11. [File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)
 12. [Walkie-ListenTalkie overview and shared behavior](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)
 13. [Settings](https://uandy24.github.io/omniradio-public/modes/settings/)
+14. [Audio targets and compatibility](https://uandy24.github.io/omniradio-public/targets/)
 
 Next planned sections:
 
-1. Audio targets
-2. Physical UI, Canvas, and portal
-3. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
-4. Connected hardware and complete configuration reference
-5. Wi-Fi, TLS, storage, and troubleshooting
-6. Installation and firmware distribution after N8R8 validation
+1. Physical UI, Canvas, and portal
+2. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
+3. Connected hardware and complete configuration reference
+4. Wi-Fi, TLS, storage, and troubleshooting
+5. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
