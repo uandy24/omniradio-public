@@ -24,6 +24,7 @@ These sections are already published and checked against the current firmware im
 - **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
 - **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I²S input, level and clipping indication, safe monitoring, target routing, and voice recording
 - **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
+- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels, service switching, shared favorites, and current implementation boundaries
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -72,10 +73,10 @@ Actual capabilities depend on the hardware connected and enabled in the device c
 | Audiobooks | LibriVox discovery, sections, bookmarks, and playback | Wi-Fi and audio output |
 | Files | Local files, folders, playlists, and removable storage | Supported storage and audio output |
 | Microphone | Audio input, level monitoring, and routing | Microphone and compatible audio input hardware |
-| Walkie-Talkie | Mumble, M17, Zello, and SIP2SIP communication | Wi-Fi and compatible audio input/output |
+| Walkie-ListenTalkie | Listen-first voice chats and channels through Mumble, M17, Zello, and SIP2SIP | Wi-Fi and compatible audio input/output |
 | Settings | Device, Wi-Fi, portal, region, system, reset, and version control | Physical display and input |
 
-Mumble, M17, Zello, and SIP2SIP are protocol implementations inside the Walkie-Talkie mode. They are documented as part of that mode rather than as top-level product concepts.
+Mumble, M17, Zello, and SIP2SIP are service implementations inside Walkie-ListenTalkie. The public name describes the product concept; the firmware currently retains `WalkieTalkieMode` and `/lfs/walkietalkie` as internal compatibility names.
 
 ## Audio targets
 
@@ -183,10 +184,11 @@ Completed:
 9. [Files](https://uandy24.github.io/omniradio-public/modes/files/)
 10. [Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)
 11. [File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)
+12. [Walkie-ListenTalkie overview and shared behavior](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)
 
 Next planned sections:
 
-1. Walkie-Talkie and its protocol implementations
+1. Detailed Mumble, M17, Zello, and SIP2SIP pages within Walkie-ListenTalkie
 2. Settings and audio targets
 3. Physical UI, Canvas, and portal
 4. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
