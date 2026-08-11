@@ -24,7 +24,7 @@ These sections are already published and checked against the current firmware im
 - **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
 - **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I²S input, level and clipping indication, safe monitoring, target routing, and voice recording
 - **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
-- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels, service switching, shared favorites, and current implementation boundaries
+- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels, service switching, shared favorites, current boundaries, and a complete [Mumble guide](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/)
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -188,7 +188,7 @@ Completed:
 
 Next planned sections:
 
-1. Detailed Mumble, M17, Zello, and SIP2SIP pages within Walkie-ListenTalkie
+1. Detailed M17, Zello, and SIP2SIP pages within Walkie-ListenTalkie
 2. Settings and audio targets
 3. Physical UI, Canvas, and portal
 4. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
