@@ -76,7 +76,7 @@ Actual capabilities depend on the hardware connected and enabled in the device c
 | Walkie-ListenTalkie | Listen-first voice chats and channels through Mumble, M17, Zello, and SIP2SIP | Wi-Fi and compatible audio input/output |
 | Settings | Device, Wi-Fi, portal, region, system, reset, and version control | Physical display and input |
 
-Mumble, M17, Zello, and SIP2SIP are service implementations inside Walkie-ListenTalkie. The public name describes the product concept; the firmware currently retains `WalkieTalkieMode` and `/lfs/walkietalkie` as internal compatibility names.
+Mumble, M17, Zello, and SIP2SIP are communication services inside Walkie-ListenTalkie. The public name describes the shared listen-first, talk-when-needed product concept.
 
 ## Audio targets
 
@@ -142,8 +142,8 @@ Hardware is treated as configuration. Features should become available only when
 
 OmniRadio uses several persistence layers for different responsibilities:
 
-- **NVS** for compact settings, protected values, and device-generated local TLS material
-- **LittleFS** for structured configuration, profiles, bookmarks, playlists, and language resources
+- **Protected device storage** for compact settings, protected values, and device-generated local TLS material
+- **Controlled configuration files** for profiles, bookmarks, playlists, and language resources
 - **External storage** for user media and recordings where supported
 - **Firmware defaults** for first boot and recovery
 
