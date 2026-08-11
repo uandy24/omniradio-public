@@ -187,8 +187,9 @@ Next planned sections:
 3. Walkie-Talkie and its protocol implementations
 4. Settings and audio targets
 5. Physical UI, Canvas, and portal
-6. Connected hardware and complete configuration reference
-7. Wi-Fi, TLS, storage, and troubleshooting
-8. Installation and firmware distribution after N8R8 validation
+6. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
+7. Connected hardware and complete configuration reference
+8. Wi-Fi, TLS, storage, and troubleshooting
+9. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
