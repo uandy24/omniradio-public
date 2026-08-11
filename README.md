@@ -17,6 +17,7 @@ These sections are already published and checked against the current firmware im
 - **[Core concepts](https://uandy24.github.io/omniradio-public/concepts/terminology/)** — terminology, modes, pages, sources, targets, Canvas/UI, and the embedded portal
 - **[FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)** — SI4732 requirements, all FM pages, regional ranges, tuning, scanning, presets, signal quality, audio processing, RDS, and persistent settings
 - **[AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)** — LW, MW, and SW entries, all AM pages, EiBi schedules, antenna controls, receiver settings, audio processing, and persistence
+- **[SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)** — amateur-band entries, SI4732 patch lifecycle, LSB/USB/CW, BFO, receiver bandwidth, scanning, presets, and analog audio requirements
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -169,16 +170,16 @@ Completed:
 2. [Overview and terminology](https://uandy24.github.io/omniradio-public/concepts/terminology/)
 3. [FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)
 4. [AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)
+5. [SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)
 
 Next planned sections:
 
-1. SSB Radio
-2. Internet Radio, Podcasts, Audiobooks, Files, and Microphone
-3. Walkie-Talkie and its protocol implementations
-4. Settings and audio targets
-5. Physical UI, Canvas, and portal
-6. Connected hardware and complete configuration reference
-7. Wi-Fi, TLS, storage, and troubleshooting
-8. Installation and firmware distribution after N8R8 validation
+1. Internet Radio, Podcasts, Audiobooks, Files, and Microphone
+2. Walkie-Talkie and its protocol implementations
+3. Settings and audio targets
+4. Physical UI, Canvas, and portal
+5. Connected hardware and complete configuration reference
+6. Wi-Fi, TLS, storage, and troubleshooting
+7. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
