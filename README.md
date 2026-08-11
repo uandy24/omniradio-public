@@ -1,8 +1,7 @@
 # OmniRadio
 
-Official public documentation and firmware releases for OmniRadio.
+Official public documentation for OmniRadio.
 
-- Documentation: https://uandy24.github.io/omniradio-public/
-- Firmware downloads: https://github.com/uandy24/omniradio-public/releases
+Read the documentation at https://uandy24.github.io/omniradio-public/.
 
-Firmware source code is maintained separately and is not published in this repository.
+Firmware source code and development artifacts are maintained separately and are not published in this repository.
