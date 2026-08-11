@@ -191,11 +191,11 @@ Completed:
 16. [Embedded portal](https://uandy24.github.io/omniradio-public/portal/)
 17. [Battery and power status](https://uandy24.github.io/omniradio-public/power/)
 18. [Connected hardware](https://uandy24.github.io/omniradio-public/hardware/)
+19. [Configuration reference](https://uandy24.github.io/omniradio-public/reference/configuration/)
 
 Next planned sections:
 
-1. Complete configuration reference
-2. Wi-Fi, TLS, storage, and troubleshooting
-3. Installation and firmware distribution after N8R8 validation
+1. Wi-Fi, TLS, storage, and troubleshooting
+2. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
