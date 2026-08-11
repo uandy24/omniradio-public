@@ -85,67 +85,67 @@
 <tr>
 <td>Band entry</td>
 <td>CCIR (default), Japan, OIRT, Wide</td>
-<td>NVS, mode-wide</td>
+<td>Saved, mode-wide</td>
 </tr>
 <tr>
 <td>Frequency</td>
 <td>Entry range; entry start frequency on first use</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>Tuning step</td>
 <td>Supported step or station mode; 100 kHz default</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>Start page</td>
 <td>Last used (default) or any FM working page</td>
-<td>NVS</td>
+<td>Saved</td>
 </tr>
 <tr>
 <td>AGC</td>
 <td>On by default</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>Soft mute</td>
 <td>On by default</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>Attenuation</td>
 <td>Off by default</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>Attenuation index</td>
 <td>0–26; default 13</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>Channel filter</td>
 <td>Auto/110/84/60/40 kHz; default index 1 (110 kHz)</td>
-<td>NVS, per entry</td>
+<td>Saved, per entry</td>
 </tr>
 <tr>
 <td>De-emphasis</td>
 <td>Receiver values 1 or 2; default 1</td>
-<td>NVS, per entry; not currently exposed by an FM page control</td>
+<td>Saved, per entry; not currently exposed by an FM page control</td>
 </tr>
 <tr>
 <td>Scan dwell</td>
 <td>1–10; page default 3</td>
-<td>NVS, Band Scan page</td>
+<td>Saved, Band Scan page</td>
 </tr>
 <tr>
 <td>Presets</td>
 <td>Saved tuning records</td>
-<td>NVS</td>
+<td>Saved</td>
 </tr>
 <tr>
 <td>RDS settings</td>
 <td>See <a href="../rds-settings/">RDS Settings</a></td>
-<td>NVS, FM mode</td>
+<td>Saved, FM mode</td>
 </tr>
 <tr>
 <td>High-pass/low-pass/notch/EQ</td>
@@ -155,7 +155,7 @@
 </tbody>
 </table>
 <div class="sl-heading-wrapper level-h2"><h2 id="startup-behavior">Startup behavior</h2><a class="sl-anchor-link" href="#startup-behavior"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Startup behavior”</span></a></div>
-<p>The common Settings page chooses either <strong>Last used</strong> or one explicit FM page as the page opened when FM mode activates. Frequency is restored independently for each FM entry. The code also supports a saved start-frequency mode/value internally; no dedicated FM page control currently exposes it.</p>
+<p>The common Settings page chooses either <strong>Last used</strong> or one explicit FM page as the page opened when FM mode activates. Frequency is restored independently for each FM entry. There is currently no dedicated FM page control for choosing a separate startup frequency.</p>
 <div class="sl-heading-wrapper level-h2"><h2 id="restart-requirements">Restart requirements</h2><a class="sl-anchor-link" href="#restart-requirements"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Restart requirements”</span></a></div>
-<p>The exposed FM receiver and RDS controls are applied live and do not require a restart. NVS writes are coordinated through the application’s dirty-state save mechanism rather than necessarily occurring at the exact instant a control moves.</p>
+<p>The exposed FM receiver and RDS controls are applied live and do not require a restart. Persistent controls are saved automatically.</p>
 </div><footer class="sl-flex astro-xhxjzfa7"><div class="meta sl-flex astro-xhxjzfa7"></div><div class="pagination-links print:hidden astro-jgq3vlii" dir="ltr"><a href="/omniradio-public/modes/fm/rds-settings/" rel="prev" class="astro-jgq3vlii"><svg aria-hidden="true" class="astro-jgq3vlii astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-jgq3vlii">Previous<br class="astro-jgq3vlii"><span class="link-title astro-jgq3vlii">RDS Settings</span></span></a><a href="/omniradio-public/modes/am/" rel="next" class="astro-jgq3vlii"><svg aria-hidden="true" class="astro-jgq3vlii astro-n5k4ipy7" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-jgq3vlii">Next<br class="astro-jgq3vlii"><span class="link-title astro-jgq3vlii">AM Radio overview</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
