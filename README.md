@@ -8,6 +8,17 @@ The project is under active development. Public documentation is available, but 
 
 [Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/)
 
+## Available documentation
+
+These sections are already published and checked against the current firmware implementation:
+
+- **[Getting Started](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/)** — requirements, preparation, first boot, connected-hardware configuration, Wi-Fi, portal access, and physical navigation
+- **[Project overview](https://uandy24.github.io/omniradio-public/project/goals/)** — goals and non-goals, philosophy, differences, architecture, and current status
+- **[Core concepts](https://uandy24.github.io/omniradio-public/concepts/terminology/)** — terminology, modes, pages, sources, targets, Canvas/UI, and the embedded portal
+- **[FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)** — SI4732 requirements, all FM pages, regional ranges, tuning, scanning, presets, signal quality, audio processing, RDS, and persistent settings
+
+Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
+
 ## The main idea
 
 OmniRadio is not a collection of separate ESP32 demos placed behind one menu. Every capability participates in the same product architecture:
@@ -147,16 +158,23 @@ Firmware source is maintained in a separate private repository. Public firmware 
 
 ## Documentation status
 
-The documentation is being expanded directly from the firmware implementation. The planned order is:
+The documentation is being expanded directly from the firmware implementation.
 
-1. Overview and terminology
-2. Broadcast radio modes
-3. Internet Radio, Podcasts, Audiobooks, Files, and Microphone
-4. Walkie-Talkie and its protocol implementations
-5. Settings and audio targets
-6. Physical UI, canvas, and portal
-7. Connected hardware and complete configuration reference
-8. Wi-Fi, TLS, storage, and troubleshooting
-9. Installation and firmware distribution after N8R8 validation
+Completed:
+
+1. Getting Started before public firmware
+2. Overview and terminology
+3. FM Radio
+
+Next planned sections:
+
+1. AM and SSB broadcast radio
+2. Internet Radio, Podcasts, Audiobooks, Files, and Microphone
+3. Walkie-Talkie and its protocol implementations
+4. Settings and audio targets
+5. Physical UI, Canvas, and portal
+6. Connected hardware and complete configuration reference
+7. Wi-Fi, TLS, storage, and troubleshooting
+8. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
