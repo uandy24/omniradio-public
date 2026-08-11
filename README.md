@@ -16,6 +16,7 @@ These sections are already published and checked against the current firmware im
 - **[Project overview](https://uandy24.github.io/omniradio-public/project/goals/)** — goals and non-goals, philosophy, differences, architecture, and current status
 - **[Core concepts](https://uandy24.github.io/omniradio-public/concepts/terminology/)** — terminology, modes, pages, sources, targets, Canvas/UI, and the embedded portal
 - **[FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)** — SI4732 requirements, all FM pages, regional ranges, tuning, scanning, presets, signal quality, audio processing, RDS, and persistent settings
+- **[AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)** — LW, MW, and SW entries, all AM pages, EiBi schedules, antenna controls, receiver settings, audio processing, and persistence
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -165,10 +166,11 @@ Completed:
 1. Getting Started before public firmware
 2. Overview and terminology
 3. FM Radio
+4. AM Radio
 
 Next planned sections:
 
-1. AM and SSB broadcast radio
+1. SSB Radio
 2. Internet Radio, Podcasts, Audiobooks, Files, and Microphone
 3. Walkie-Talkie and its protocol implementations
 4. Settings and audio targets
