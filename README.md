@@ -23,6 +23,7 @@ These sections are already published and checked against the current firmware im
 - **[Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)** — [LibriVox](https://librivox.org/) catalog browsing, chapters, bookmarks, playback position, and persistence
 - **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
 - **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I²S input, level and clipping indication, safe monitoring, target routing, and voice recording
+- **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -181,16 +182,16 @@ Completed:
 8. [Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)
 9. [Files](https://uandy24.github.io/omniradio-public/modes/files/)
 10. [Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)
+11. [File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)
 
 Next planned sections:
 
-1. File recording, including its cross-mode controls and output format
-2. Walkie-Talkie and its protocol implementations
-3. Settings and audio targets
-4. Physical UI, Canvas, and portal
-5. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
-6. Connected hardware and complete configuration reference
-7. Wi-Fi, TLS, storage, and troubleshooting
-8. Installation and firmware distribution after N8R8 validation
+1. Walkie-Talkie and its protocol implementations
+2. Settings and audio targets
+3. Physical UI, Canvas, and portal
+4. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
+5. Connected hardware and complete configuration reference
+6. Wi-Fi, TLS, storage, and troubleshooting
+7. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
