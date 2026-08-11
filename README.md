@@ -24,7 +24,7 @@ These sections are already published and checked against the current firmware im
 - **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
 - **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I²S input, level and clipping indication, safe monitoring, target routing, and voice recording
 - **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
-- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels, shared favorites, and detailed guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), and [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/)
+- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels, shared favorites, and detailed guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/), and [SIP2SIP](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/sip2sip/)
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
