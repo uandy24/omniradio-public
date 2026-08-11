@@ -22,6 +22,7 @@ These sections are already published and checked against the current firmware im
 - **[Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)** — Apple catalog discovery, publisher RSS feeds, subscriptions, bookmarks, and resumable episodes
 - **[Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)** — [LibriVox](https://librivox.org/) catalog browsing, chapters, bookmarks, playback position, and persistence
 - **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
+- **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I²S input, level and clipping indication, safe monitoring, target routing, and voice recording
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -51,7 +52,7 @@ OmniRadio is designed to combine:
 - Podcast search, feeds, favorites, bookmarks, and playback
 - LibriVox audiobook discovery, chapters, bookmarks, and playback position
 - Local audio files, folders, playlists, metadata, and USB storage
-- Microphone input and monitoring
+- Microphone input, level and clipping monitoring, routing to compatible targets, and voice recording
 - Walkie-Talkie communication through Mumble, M17, Zello, and SIP2SIP
 - Local speakers and network-oriented audio destinations
 - A multilingual physical UI and embedded configuration portal
@@ -179,17 +180,17 @@ Completed:
 7. [Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)
 8. [Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)
 9. [Files](https://uandy24.github.io/omniradio-public/modes/files/)
+10. [Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)
 
 Next planned sections:
 
-1. Microphone
-2. File recording, including the voice-recorder workflow and playback through [Files](https://uandy24.github.io/omniradio-public/modes/files/recordings/)
-3. Walkie-Talkie and its protocol implementations
-4. Settings and audio targets
-5. Physical UI, Canvas, and portal
-6. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
-7. Connected hardware and complete configuration reference
-8. Wi-Fi, TLS, storage, and troubleshooting
-9. Installation and firmware distribution after N8R8 validation
+1. File recording, including its cross-mode controls and output format
+2. Walkie-Talkie and its protocol implementations
+3. Settings and audio targets
+4. Physical UI, Canvas, and portal
+5. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
+6. Connected hardware and complete configuration reference
+7. Wi-Fi, TLS, storage, and troubleshooting
+8. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
