@@ -112,28 +112,28 @@
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">Conditional</td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td><a href="../modes/podcasts/">Podcasts</a></td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">Conditional</td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td><a href="../modes/audiobooks/">Audiobooks</a></td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">Conditional</td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td><a href="../modes/files/">Files</a></td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">Conditional</td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td><a href="../modes/microphone/">Microphone</a></td>
@@ -154,26 +154,26 @@
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">—</td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td><a href="../modes/walkie-listentalkie/zello/">Zello</a> received audio</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">Conditional</td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td><a href="../modes/walkie-listentalkie/sip2sip/">SIP2SIP</a> received audio</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center">—</td>
+<td style="text-align: center">✓</td>
 </tr>
 </tbody>
 </table>
 <p>Settings and other non-audio screens do not create a source of their own. A mode may also have no playable stream yet—for example, before selecting a file or podcast episode. Network targets report that no PCM source is available in that state.</p>
-<p><strong>Conditional</strong> means FM Audio works only when the source produces 16-bit mono or stereo PCM from 32 to 48 kHz. M17 and SIP2SIP currently produce 8 kHz PCM and therefore cannot attach to FM Audio. Zello’s received sample rate comes from the channel stream. Media sample rates depend on the station, episode, audiobook, or file. OmniRadio does not currently resample an unsupported source for this target.</p>
+<p>FM Audio accepts 16-bit mono or stereo PCM up to 48 kHz. Sources below the SI4713’s 32 kHz minimum are converted to a valid digital-input rate. This includes the 8 kHz received audio used by M17 and SIP2SIP. Mono sources are sent to both FM stereo channels.</p>
 <div class="sl-heading-wrapper level-h2"><h2 id="selection-requirements">Selection requirements</h2><a class="sl-anchor-link" href="#selection-requirements"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “Selection requirements”</span></a></div>
 <table>
 <thead>
