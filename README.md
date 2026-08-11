@@ -19,6 +19,8 @@ These sections are already published and checked against the current firmware im
 - **[AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)** — LW, MW, and SW entries, all AM pages, EiBi schedules, antenna controls, receiver settings, audio processing, and persistence
 - **[SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)** — amateur-band entries, SI4732 patch lifecycle, LSB/USB/CW, BFO, receiver bandwidth, scanning, presets, and analog audio requirements
 - **[Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/)** — Icecast-compatible streams, [Radio Browser](https://www.radio-browser.info/) discovery, favorites, ICY metadata, formats, TLS, and reconnect behavior
+- **[Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)** — Apple catalog discovery, publisher RSS feeds, subscriptions, bookmarks, and resumable episodes
+- **[Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)** — [LibriVox](https://librivox.org/) catalog browsing, chapters, bookmarks, playback position, and persistence
 
 Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
 
@@ -173,18 +175,19 @@ Completed:
 4. [AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)
 5. [SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)
 6. [Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/)
+7. [Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)
+8. [Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)
 
 Next planned sections:
 
-1. [Podcasts and Audiobooks](https://uandy24.github.io/omniradio-public/concepts/modes/)
-2. Files
-3. Microphone
-4. File recording, including the voice-recorder workflow and playback through Files
-5. Walkie-Talkie and its protocol implementations
-6. Settings and audio targets
-7. Physical UI, Canvas, and portal
-8. Connected hardware and complete configuration reference
-9. Wi-Fi, TLS, storage, and troubleshooting
-10. Installation and firmware distribution after N8R8 validation
+1. Files
+2. Microphone
+3. File recording, including the voice-recorder workflow and playback through Files
+4. Walkie-Talkie and its protocol implementations
+5. Settings and audio targets
+6. Physical UI, Canvas, and portal
+7. Connected hardware and complete configuration reference
+8. Wi-Fi, TLS, storage, and troubleshooting
+9. Installation and firmware distribution after N8R8 validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
