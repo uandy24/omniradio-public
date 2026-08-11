@@ -187,10 +187,11 @@ Completed:
 12. [Walkie-ListenTalkie overview and shared behavior](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)
 13. [Settings](https://uandy24.github.io/omniradio-public/modes/settings/)
 14. [Audio targets and compatibility](https://uandy24.github.io/omniradio-public/targets/)
+15. [Physical UI and Canvas](https://uandy24.github.io/omniradio-public/ui/)
 
 Next planned sections:
 
-1. Physical UI, Canvas, and portal
+1. Embedded portal
 2. Battery power, battery-presence detection, charging, low-battery behavior, and energy management
 3. Connected hardware and complete configuration reference
 4. Wi-Fi, TLS, storage, and troubleshooting
