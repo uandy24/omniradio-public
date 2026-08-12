@@ -8,6 +8,8 @@ The project is under active development. Public documentation is available, but 
 
 [Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/)
 
+![OmniRadio FM band view](assets/fm-band-scope.webp)
+
 ## Available documentation
 
 These sections are already published and checked against the current firmware implementation:
