@@ -203,9 +203,4 @@ Completed:
 22. [Troubleshooting](https://uandy24.github.io/omniradio-public/troubleshooting/)
 23. [Firmware installation, update, and recovery](https://uandy24.github.io/omniradio-public/firmware/)
 
-Next planned sections:
-
-1. Hardware-dependent battery and power documentation after the final power design is selected and validated
-2. Stable firmware distribution and tagged release automation after deep-beta validation
-
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
