@@ -10,7 +10,7 @@ The project is under active development. Public documentation and the first **de
 
 [Firmware installation guide](https://uandy24.github.io/omniradio-public/firmware/) — USB installation, update, recovery, and maintainer packaging for ESP32-S3 N16R8.
 
-> **Deep beta warning:** [OmniRadio 0.9.151 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.151-deep-beta) is intended for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Back up the device before flashing.
+> **Deep beta warning:** [OmniRadio 0.9.154 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta) is intended for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Back up the device before flashing.
 
 ![OmniRadio FM band view](assets/fm-band-scope.webp)
 
@@ -32,7 +32,7 @@ These sections are already published and checked against the current firmware im
 - **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
 - **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels with focused guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/), and [SIP2SIP](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/sip2sip/)
 
-The [0.9.151 Deep Beta firmware](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.151-deep-beta) and the USB installation, update, and recovery procedures are public. The procedure has been validated on ESP32-S3 N16R8 hardware; the firmware remains pre-release software.
+The [0.9.154 Deep Beta firmware](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta) and the USB installation, update, and recovery procedures are public. The procedure has been validated on ESP32-S3 N16R8 hardware; the firmware remains pre-release software.
 
 ## The main idea
 
