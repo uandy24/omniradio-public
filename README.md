@@ -8,6 +8,8 @@ The project is under active development. Public documentation is available, but 
 
 [Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/)
 
+[Firmware installation guide](https://uandy24.github.io/omniradio-public/firmware/) — USB installation, update, recovery, and maintainer packaging for ESP32-S3 N16R8. Public firmware downloads remain hidden until the first release is approved.
+
 ![OmniRadio FM band view](assets/fm-band-scope.webp)
 
 ## Available documentation
@@ -17,18 +19,18 @@ These sections are already published and checked against the current firmware im
 - **[Getting Started](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/)** — requirements, preparation, first boot, connected-hardware configuration, Wi-Fi, portal access, and physical navigation
 - **[Project overview](https://uandy24.github.io/omniradio-public/project/goals/)** — goals and non-goals, philosophy, differences, architecture, and current status
 - **[Core concepts](https://uandy24.github.io/omniradio-public/concepts/terminology/)** — terminology, modes, pages, sources, targets, Canvas/UI, and the embedded portal
-- **[FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)** — SI4732 requirements, all FM pages, regional ranges, tuning, scanning, presets, signal quality, audio processing, RDS, and persistent settings
-- **[AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)** — LW, MW, and SW entries, all AM pages, EiBi schedules, antenna controls, receiver settings, audio processing, and persistence
+- **[FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)** — tuning, scanning, Band Scope, presets, reception quality, RDS, and settings
+- **[AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)** — LW, MW, and SW reception, scanning, Band Scope, EiBi schedules, and settings
 - **[SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)** — amateur-band entries, SI4732 patch lifecycle, LSB/USB/CW, BFO, receiver bandwidth, scanning, presets, and analog audio requirements
 - **[Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/)** — Icecast-compatible streams, [Radio Browser](https://www.radio-browser.info/) discovery, favorites, ICY metadata, formats, TLS, and reconnect behavior
 - **[Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)** — Apple catalog discovery, publisher RSS feeds, subscriptions, bookmarks, and resumable episodes
 - **[Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)** — [LibriVox](https://librivox.org/) catalog browsing, chapters, bookmarks, playback position, and persistence
 - **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
-- **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I²S input, level and clipping indication, safe monitoring, target routing, and voice recording
+- **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I2S input, target routing, monitoring, and standalone voice recording
 - **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
-- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels, shared favorites, and detailed guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/), and [SIP2SIP](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/sip2sip/)
+- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels with focused guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/), and [SIP2SIP](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/sip2sip/)
 
-Public firmware downloads, flashing, upgrades, and recovery remain intentionally hidden until the ESP32-S3 N8R8 release profile is validated.
+Public firmware downloads remain intentionally hidden until the first release is explicitly approved. The USB installation, update, and recovery procedures are documented and have been validated on ESP32-S3 N16R8 hardware.
 
 ## The main idea
 
@@ -112,7 +114,7 @@ This public website is separate from the embedded portal. It documents the produ
 
 ## Hardware-aware design
 
-The first public hardware target is planned around an **ESP32-S3 N8R8**: 8 MB flash and 8 MB octal PSRAM.
+The first public hardware target is an **ESP32-S3 N16R8**: 16 MB flash and 8 MB octal PSRAM. N8 variants are not supported.
 
 Depending on the assembly, OmniRadio can use:
 
@@ -197,10 +199,11 @@ Completed:
 20. [Wi-Fi, TLS, and security](https://uandy24.github.io/omniradio-public/security/)
 21. [Files and storage reference](https://uandy24.github.io/omniradio-public/reference/storage/)
 22. [Troubleshooting](https://uandy24.github.io/omniradio-public/troubleshooting/)
+23. [Firmware installation, update, and recovery](https://uandy24.github.io/omniradio-public/firmware/)
 
 Next planned sections:
 
-1. Installation and firmware distribution after N8R8 validation
-2. Reproducible screenshots and documentation-change checks
+1. Hardware-dependent battery and power documentation after the final power design is selected and validated
+2. Public firmware downloads and release automation after explicit approval
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
