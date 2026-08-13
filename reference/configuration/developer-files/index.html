@@ -172,11 +172,11 @@
 </tr>
 <tr>
 <td><code dir="auto">1000</code>–<code dir="auto">1015</code></td>
-<td>Use MCP23017 GPA0–GPA7 and GPB0–GPB7 respectively</td>
+<td>Use expander GPA0–GPA7 and GPB0–GPB7 (MCP23017) or GP0–GP7 (MCP23008; only <code dir="auto">1000</code>–<code dir="auto">1007</code> exist on this chip, <code dir="auto">1008</code>–<code dir="auto">1015</code> fail safely and log an error)</td>
 </tr>
 </tbody>
 </table>
-<p>The expander is the I²C <a href="https://www.microchip.com/en-us/product/MCP23017">Microchip MCP23017</a>, currently expected at address <code dir="auto">0x20</code> on the shared bus. Expanded numbers are suitable only for signals handled as ordinary digital input/output by the firmware. I²S, SPI, clocks, ADC input, and other peripheral-matrix signals still require suitable native GPIOs. The current source does <strong>not</strong> implement MCP23008 addressing.</p>
+<p>A separate <code dir="auto">expander_type</code> field selects which chip the numbers above address: <code dir="auto">0</code> disables the expander entirely, <code dir="auto">1</code> selects the I²C <a href="https://www.microchip.com/en-us/product/MCP23017">Microchip MCP23017</a> (16 pins, the default), <code dir="auto">2</code> selects the <a href="https://www.microchip.com/en-us/product/MCP23008">MCP23008</a> (8 pins). Whichever chip is selected is expected at address <code dir="auto">0x20</code> on the shared bus. Expanded numbers are suitable only for signals handled as ordinary digital input/output by the firmware. I²S, SPI, clocks, ADC input, and other peripheral-matrix signals still require suitable native GPIOs.</p>
 <div class="sl-heading-wrapper level-h2"><h2 id="gpio-validation-and-recovery">GPIO validation and recovery</h2><a class="sl-anchor-link" href="#gpio-validation-and-recovery"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “GPIO validation and recovery”</span></a></div>
 <p>The loader repairs fields individually when the root JSON object is valid:</p>
 <table>

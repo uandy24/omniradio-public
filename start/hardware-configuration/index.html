@@ -86,7 +86,7 @@
 <ul>
 <li>Missing fields retain their compiled board-profile defaults.</li>
 <li>Values must be integers.</li>
-<li>A native GPIO must be accepted by the compiled target, while <code dir="auto">1000</code>–<code dir="auto">1015</code> address MCP23017 pins.</li>
+<li>A native GPIO must be accepted by the compiled target, while <code dir="auto">1000</code>–<code dir="auto">1015</code> address expander pins; <code dir="auto">expander_type</code> selects which chip (MCP23017 or MCP23008) they mean.</li>
 <li>Use <code dir="auto">-1</code> to disable hardware that is not connected.</li>
 <li>The file size must not exceed 8192 bytes.</li>
 <li>A missing or invalid root object restores the complete compiled defaults.</li>
@@ -255,6 +255,10 @@
 <tr>
 <td><code dir="auto">osc32k_en</code></td>
 <td>Optional active-high 32.768 kHz oscillator enable</td>
+</tr>
+<tr>
+<td><code dir="auto">expander_type</code></td>
+<td>GPIO expander chip: <code dir="auto">0</code> none, <code dir="auto">1</code> MCP23017 (16 pins, default), <code dir="auto">2</code> MCP23008 (8 pins)</td>
 </tr>
 </tbody>
 </table>
