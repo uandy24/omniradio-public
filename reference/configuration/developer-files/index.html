@@ -85,7 +85,7 @@
 <tbody>
 <tr>
 <td><code dir="auto">features.json</code></td>
-<td>Allow-list of modes, Walkie-ListenTalkie services, and targets shown by this device</td>
+<td>Product features and system-console transport exposed by this device</td>
 <td>After restart</td>
 </tr>
 <tr>
@@ -102,7 +102,7 @@
 </table>
 <p>The portal offers a restart after any of these files is saved. Each generated file contains a <code dir="auto">_help</code> object; it is descriptive metadata rather than an active setting.</p>
 <div class="sl-heading-wrapper level-h2"><h2 id="featuresjson"><code dir="auto">features.json</code></h2><a class="sl-anchor-link" href="#featuresjson"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “features.json”</span></a></div>
-<p>Every listed value is Boolean. <code dir="auto">false</code> hides that optional feature from normal selectors; it does not remove its code from the firmware and does not replace hardware/runtime availability checks. Unknown internal features, including Settings and recovery access, remain allowed so a developer cannot hide the path needed to repair configuration.</p>
+<p>Boolean feature values hide or expose optional functionality; they do not remove its code from the firmware and do not replace hardware/runtime availability checks. Unknown internal features, including Settings and recovery access, remain allowed so a developer cannot hide the path needed to repair configuration.</p>
 <table>
 <thead>
 <tr>
@@ -123,9 +123,34 @@
 <td>Targets</td>
 <td><code dir="auto">target_local</code>, <code dir="auto">target_dlna</code>, <code dir="auto">target_http_stream</code>, <code dir="auto">target_fm_audio</code></td>
 </tr>
+<tr>
+<td>USB device storage</td>
+<td><code dir="auto">usb_device_storage</code></td>
+</tr>
 </tbody>
 </table>
-<p>All entries default to <code dir="auto">true</code>. A missing, malformed, oversized, incomplete, or non-Boolean configuration is replaced as a whole with those defaults.</p>
+<p><code dir="auto">usb_device_storage</code> defaults to <code dir="auto">true</code>. When it is <code dir="auto">false</code>, the <strong>USB Drive</strong> page is omitted from File mode and the firmware also rejects attempts to start a USB Mass Storage session. Enable it only for a board profile whose USB OTG device data path is physically connected.</p>
+<p>The <code dir="auto">console</code> string selects the interactive firmware console after restart:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Console transport</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code dir="auto">usb_serial_jtag</code></td>
+<td>ESP32 USB Serial/JTAG; default</td>
+</tr>
+<tr>
+<td><code dir="auto">uart</code></td>
+<td>UART0 at 115200 baud; ESP32-S3 default TX GPIO43 and RX GPIO44</td>
+</tr>
+</tbody>
+</table>
+<p>Flashing and the runtime console are separate. A firmware image may be flashed through UART while its runtime console remains <code dir="auto">usb_serial_jtag</code>, or flashed through native USB while its runtime console is <code dir="auto">uart</code>.</p>
+<p>Optional mode/service/target entries and <code dir="auto">usb_device_storage</code> default to <code dir="auto">true</code>; <code dir="auto">console</code> defaults to <code dir="auto">usb_serial_jtag</code>. Older valid files are migrated by adding the new fields without resetting their existing feature choices. A malformed, oversized, incomplete legacy feature set, invalid console value, or wrong field type is replaced with defaults.</p>
 <div class="sl-heading-wrapper level-h2"><h2 id="micjson"><code dir="auto">mic.json</code></h2><a class="sl-anchor-link" href="#micjson"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore>Section titled “mic.json”</span></a></div>
 <table>
 <thead>
