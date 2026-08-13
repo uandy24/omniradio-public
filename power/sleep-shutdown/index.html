@@ -76,7 +76,7 @@
 <ul>
 <li>hold <strong>MODE</strong> for four seconds;</li>
 <li>select <strong>Power off</strong> in <strong>Settings → System</strong> and confirm;</li>
-<li>select <strong>Deep sleep</strong> in the <a href="../portal/">embedded portal</a> and confirm.</li>
+<li>select <strong>Deep sleep</strong> in the <a href="../../portal/">embedded portal</a> and confirm.</li>
 </ul>
 <p>Before sleeping, OmniRadio closes the active mode, stops its audio input, powers down the SI4732 receiver when present, turns off and sleeps the display, and holds the receiver reset state. Press <strong>MODE</strong> again to wake the device.</p>
 <p>Deep sleep does not disconnect a battery electrically. The real sleep current also includes the voltage divider, regulator, display, storage, amplifiers, and any other connected modules. It must be measured on the final assembly. See Espressif’s <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/api-reference/system/sleep_modes.html">ESP32-S3 sleep-mode documentation</a> for the processor behavior; board-level current can be substantially higher.</p>
