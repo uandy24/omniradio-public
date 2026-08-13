@@ -4,11 +4,13 @@
 
 OmniRadio is a **multi-source, multi-target radio and network-audio platform** built around the ESP32-S3. It brings broadcast reception, internet audio, podcasts, audiobooks, local files, microphone input, and voice communication into one physical device with one consistent interface, while keeping audio sources separate from their destinations.
 
-The project is under active development. Public documentation is available, but public firmware downloads and installation images are not yet published.
+The project is under active development. Public documentation and the first **deep beta** firmware build are available. This is not a stable release.
 
 [Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/)
 
-[Firmware installation guide](https://uandy24.github.io/omniradio-public/firmware/) — USB installation, update, recovery, and maintainer packaging for ESP32-S3 N16R8. Public firmware downloads remain hidden until the first release is approved.
+[Firmware installation guide](https://uandy24.github.io/omniradio-public/firmware/) — USB installation, update, recovery, and maintainer packaging for ESP32-S3 N16R8.
+
+> **Deep beta warning:** [OmniRadio 0.9.151 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.151-deep-beta) is intended for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Back up the device before flashing.
 
 ![OmniRadio FM band view](assets/fm-band-scope.webp)
 
@@ -30,7 +32,7 @@ These sections are already published and checked against the current firmware im
 - **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
 - **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels with focused guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/), and [SIP2SIP](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/sip2sip/)
 
-Public firmware downloads remain intentionally hidden until the first release is explicitly approved. The USB installation, update, and recovery procedures are documented and have been validated on ESP32-S3 N16R8 hardware.
+The [0.9.151 Deep Beta firmware](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.151-deep-beta) and the USB installation, update, and recovery procedures are public. The procedure has been validated on ESP32-S3 N16R8 hardware; the firmware remains pre-release software.
 
 ## The main idea
 
@@ -204,6 +206,6 @@ Completed:
 Next planned sections:
 
 1. Hardware-dependent battery and power documentation after the final power design is selected and validated
-2. Public firmware downloads and release automation after explicit approval
+2. Stable firmware distribution and tagged release automation after deep-beta validation
 
 See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
