@@ -187,6 +187,7 @@ Actual capabilities always depend on feature settings, available hardware, netwo
 - [Getting Started](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/) — preparation, first boot, Wi-Fi, portal access, and navigation
 - [Firmware installation](https://uandy24.github.io/omniradio-public/firmware/) — download, USB installation, update, and recovery
 - [Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/), [Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/), and [Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/) — network listening on a bare board
+- Broadcast Radio: [FM](https://uandy24.github.io/omniradio-public/modes/fm/), [AM and shortwave](https://uandy24.github.io/omniradio-public/modes/am/), and [SSB](https://uandy24.github.io/omniradio-public/modes/ssb/) — tuning, scanning, presets, signal information, RDS, EiBi, BFO, and Band Scope
 - [Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/) — Mumble, M17, Zello, and SIP2SIP
 - [Audio targets](https://uandy24.github.io/omniradio-public/targets/) — Local Audio, DLNA, HTTP Stream, and FM Audio
 - [Connected hardware](https://uandy24.github.io/omniradio-public/hardware/) — optional devices, buses, pins, and diagnostics
