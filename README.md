@@ -1,206 +1,177 @@
 # OmniRadio
 
-**One device. Many ways to listen, communicate, and explore radio.**
+**One radio and network-audio interface—on a physical display or directly in your browser.**
 
-OmniRadio is a **multi-source, multi-target radio and network-audio platform** built around the ESP32-S3. It brings broadcast reception, internet audio, podcasts, audiobooks, local files, microphone input, and voice communication into one physical device with one consistent interface, while keeping audio sources separate from their destinations.
+OmniRadio brings internet radio, podcasts, audiobooks, broadcast radio, local audio, and voice communication to the ESP32-S3. Start with a bare ESP32-S3 N16R8, then add only the hardware and features you actually want.
 
-The project is under active development. Public documentation and the first **deep beta** firmware build are available. This is not a stable release.
+[Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/) · [Install the deep beta](https://uandy24.github.io/omniradio-public/firmware/) · [Open the GitHub prerelease](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta)
 
-[Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/)
-
-[Firmware installation guide](https://uandy24.github.io/omniradio-public/firmware/) — USB installation, update, recovery, and maintainer packaging for ESP32-S3 N16R8.
-
-> **Deep beta warning:** [OmniRadio 0.9.154 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta) is intended for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Back up the device before flashing.
+> **Deep beta:** OmniRadio 0.9.154 is pre-release firmware for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Read the installation and recovery instructions before flashing.
 
 ![OmniRadio FM band view](assets/fm-band-scope.webp)
 
-## Available documentation
+## Start with only an ESP32-S3
 
-These sections are already published and checked against the current firmware implementation:
+For the first public build, the minimum hardware is:
 
-- **[Getting Started](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/)** — requirements, preparation, first boot, connected-hardware configuration, Wi-Fi, portal access, and physical navigation
-- **[Project overview](https://uandy24.github.io/omniradio-public/project/goals/)** — goals and non-goals, philosophy, differences, architecture, and current status
-- **[Core concepts](https://uandy24.github.io/omniradio-public/concepts/terminology/)** — terminology, modes, pages, sources, targets, Canvas/UI, and the embedded portal
-- **[FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)** — tuning, scanning, Band Scope, presets, reception quality, RDS, and settings
-- **[AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)** — LW, MW, and SW reception, scanning, Band Scope, EiBi schedules, and settings
-- **[SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)** — amateur-band entries, SI4732 patch lifecycle, LSB/USB/CW, BFO, receiver bandwidth, scanning, presets, and analog audio requirements
-- **[Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/)** — Icecast-compatible streams, [Radio Browser](https://www.radio-browser.info/) discovery, favorites, ICY metadata, formats, TLS, and reconnect behavior
-- **[Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)** — Apple catalog discovery, publisher RSS feeds, subscriptions, bookmarks, and resumable episodes
-- **[Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)** — [LibriVox](https://librivox.org/) catalog browsing, chapters, bookmarks, playback position, and persistence
-- **[Files](https://uandy24.github.io/omniradio-public/modes/files/)** — SD-card audio, folders, queues, playlists, recordings, metadata, and USB storage access
-- **[Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)** — live I2S input, target routing, monitoring, and standalone voice recording
-- **[File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)** — cross-mode capture controls, supported sources, MP3 and ID3 rules, SD-card lifecycle, and error handling
-- **[Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)** — listen-first voice chats and channels with focused guides for [Mumble](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/mumble/), [M17](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/m17/), [Zello](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/zello/), and [SIP2SIP](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/sip2sip/)
+- an **ESP32-S3 N16R8** with 16 MB flash and 8 MB octal PSRAM;
+- a USB data cable;
+- Wi-Fi;
+- a browser.
 
-The [0.9.154 Deep Beta firmware](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta) and the USB installation, update, and recovery procedures are public. The procedure has been validated on ESP32-S3 N16R8 hardware; the firmware remains pre-release software.
+You do **not** need a display, encoder, SI4732, DAC, amplifier, speaker, microphone, or SD card to begin.
 
-## The main idea
+On a bare board, OmniRadio can provide:
 
-OmniRadio is not a collection of separate ESP32 demos placed behind one menu. Every capability participates in the same product architecture:
+- **Internet Radio** with discovery, favorites, and stream metadata;
+- **Podcasts** with search, subscriptions, bookmarks, and resumable episodes;
+- **LibriVox Audiobooks** with discovery, chapters, bookmarks, and saved position;
+- **Mumble**, **SIP2SIP**, and **Zello** for listening;
+- the amateur-radio **M17** service in listen-only operation;
+- the embedded browser portal and interactive Device Mirror;
+- **HTTP Stream** playback directly in the browser.
+
+A configured microphone enables Mumble push-to-talk. In the current firmware, M17, Zello, and SIP2SIP remain receive-only regardless of microphone availability.
+
+## One interface in two places
+
+The optional physical display and the browser-based **Device Mirror** show the same native 320 × 240 firmware interface, nearly pixel for pixel. They share the current mode, page, selection, menus, dialogs, and playback state.
+
+The Device Mirror is interactive—not a passive screenshot or a separate simplified web UI. Click its controls or use the virtual encoder actions to operate OmniRadio entirely from a browser. A physical display and encoder are optional.
+
+Select **HTTP Stream** as the active audio target and listen directly on the same Device Mirror page. This makes a bare ESP32-S3 a complete browser-controlled network radio without local audio hardware.
+
+[See the Device Mirror](https://uandy24.github.io/omniradio-public/ui/canvas/) · [Open and use the portal](https://uandy24.github.io/omniradio-public/portal/)
+
+## Add only the hardware you need
+
+| Optional hardware | Capabilities it adds |
+| --- | --- |
+| ST7789 display and encoder | A self-contained physical interface showing the same UI as the browser mirror |
+| I2S output and amplifiers | Local speaker playback |
+| SI4732 receiver and required audio path | FM, AM, shortwave, and SSB reception |
+| SD card | Local files, playlists, recordings, and USB storage access |
+| Microphone | Voice capture, recording, and Mumble push-to-talk |
+| SI4713 transmitter | FM Audio as an output target |
+
+The same firmware can run as a headless network radio, a simple internet-radio appliance, or a fully equipped broadcast and communication device.
+
+## The interface follows your settings and hardware
+
+OmniRadio does not expose every function merely because its code exists in the firmware.
+
+A mode, communication service, page, or audio target appears only when:
+
+1. it is enabled in the device feature settings;
+2. its required hardware is configured and available;
+3. its current runtime requirements, such as a Wi-Fi connection, are met.
+
+For example:
+
+- enabling FM does not show the FM mode unless an SI4732 receiver is detected;
+- disabling Podcasts hides the Podcast mode even when Wi-Fi is connected;
+- Files stays hidden without configured SD storage;
+- Local Audio stays hidden without configured amplifier hardware;
+- Mumble listening remains available without exposing microphone-dependent PTT controls;
+- M17, Zello, and SIP2SIP remain receive-only in the current firmware.
+
+Missing optional hardware therefore does not leave empty modes or broken controls in normal navigation.
+
+## Keep only the features you want
+
+Optional modes can be disabled individually. The communication services and audio targets can also be selected separately.
+
+You can, for example:
+
+- disable Podcasts and Audiobooks;
+- hide the complete Walkie-ListenTalkie mode;
+- keep Mumble while disabling M17, Zello, and SIP2SIP;
+- disable unused Local Audio, DLNA, HTTP Stream, or FM Audio targets;
+- reduce OmniRadio to **Internet Radio with HTTP Stream** and nothing else in its everyday interface.
+
+These choices hide features from the product interface; they do not remove their code from the firmware. Settings and recovery access remain available so the configuration can be changed safely later.
+
+> **You choose the features. OmniRadio shows only what the current device can use.**
+
+## What OmniRadio can grow into
+
+### Listening and media
+
+- FM reception with tuning, scanning, presets, signal information, RDS, and Band Scope
+- AM, longwave, medium-wave, and shortwave reception with scanning, presets, and EiBi schedules
+- SSB reception with USB, LSB, CW, BFO, tuning step, and bandwidth control
+- Internet radio with direct HTTP/HTTPS streams and Radio Browser discovery
+- Podcast discovery, subscriptions, bookmarks, and resumable playback
+- LibriVox audiobook discovery, chapters, bookmarks, and saved position
+- Local files, folders, playlists, metadata, and removable storage
+
+### Communication and recording
+
+- Mumble, M17, Zello, and SIP2SIP inside one Walkie-ListenTalkie experience
+- Mumble listening without a microphone, with push-to-talk when a microphone is configured
+- Receive-only M17, Zello, and SIP2SIP operation in the current firmware
+- Microphone input, level monitoring, compatible target routing, and voice recording when hardware is available
+- File recording from supported sources to optional storage
+
+### Audio destinations
+
+- **Local Audio** through configured I2S output and amplifiers
+- **DLNA** to a compatible renderer on the local network
+- **HTTP Stream** to the browser or another compatible LAN client
+- **FM Audio** through an optional SI4713 transmitter
+
+The current firmware selects one active target at a time. Source and target remain separate: changing what you listen to does not inherently change where its audio is delivered.
+
+## Install the deep beta
+
+The public build supports **ESP32-S3 N16R8**. N8 variants are not supported.
+
+1. Download the complete USB package.
+2. Verify the included SHA-256 checksum.
+3. Erase flash for a first installation.
+4. Write the universal `firmware.bin` image at `0x0`.
+5. Restart, join the generated `omniradio_XXXX` access point, and open the embedded portal.
+6. Add your normal Wi-Fi network and use the Device Mirror from a browser.
+
+[Download OmniRadio 0.9.154 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta) · [Read the complete USB installation guide](https://uandy24.github.io/omniradio-public/firmware/usb-install/) · [Read update and recovery instructions](https://uandy24.github.io/omniradio-public/firmware/update-recovery/)
+
+## One product rather than separate demos
+
+OmniRadio uses one navigation model, one physical/browser interface, shared persistence, and a common audio-routing system.
 
 - A **mode** represents the current listening, communication, or configuration context.
-- A **page** presents one focused view of a mode on the physical display.
+- A **page** presents one focused view of a mode.
 - A **source** produces audio or live media state.
-- A **target** determines where active audio is delivered.
-- The **canvas** and reusable UI elements render the device interface.
-- The embedded **portal** handles configuration and management through a browser.
+- A **target** determines where compatible audio is delivered.
+- The shared **Canvas UI** renders both the physical display and browser Device Mirror.
+- The embedded **portal** provides interactive control, configuration, profiles, files, and system management.
 
-This separation lets the firmware grow without giving every feature its own unrelated navigation, audio output, persistence, and configuration system.
+This structure lets new capabilities participate in the same product instead of becoming unrelated applications hidden behind one menu.
 
-“Multi-source, multi-target” describes the architecture and available routing choices. It does not claim that every source can play simultaneously to every target; compatibility depends on codecs, transports, hardware, and the active mode.
+## Local and hardware-aware by design
 
-## Capabilities
-
-OmniRadio is designed to combine:
-
-- FM broadcast reception with tuning, scanning, presets, signal information, and RDS
-- AM and shortwave reception with presets, scanning, signal information, and EiBi data
-- SSB reception with USB/LSB, BFO, tuning step, and bandwidth control
-- Internet radio, including direct HTTP and HTTPS streams
-- Podcast search, feeds, favorites, bookmarks, and playback
-- LibriVox audiobook discovery, chapters, bookmarks, and playback position
-- Local audio files, folders, playlists, metadata, and USB storage
-- Microphone input, level and clipping monitoring, routing to compatible targets, and voice recording
-- Walkie-Talkie communication through Mumble, M17, Zello, and SIP2SIP
-- Local speakers and network-oriented audio destinations
-- A multilingual physical UI and embedded configuration portal
-
-Actual capabilities depend on the hardware connected and enabled in the device configuration.
-
-## Modes
-
-| Mode | Purpose | Main requirements |
-| --- | --- | --- |
-| FM Radio | FM reception, RDS, presets, scanning, and signal analysis | SI4732 receiver and radio front end |
-| AM Radio | AM and shortwave reception, presets, scanning, and EiBi browsing | SI4732 receiver and radio front end |
-| SSB Radio | USB/LSB reception with BFO and bandwidth control | SI4732 with SSB support |
-| Internet Radio | Direct network streams, browsing, metadata, and favorites | Wi-Fi and audio output |
-| Podcasts | Search, feeds, episodes, bookmarks, and playback | Wi-Fi and audio output |
-| Audiobooks | LibriVox discovery, sections, bookmarks, and playback | Wi-Fi and audio output |
-| Files | Local files, folders, playlists, and removable storage | Supported storage and audio output |
-| Microphone | Audio input, level monitoring, and routing | Microphone and compatible audio input hardware |
-| Walkie-ListenTalkie | Listen-first voice chats and channels through Mumble, M17, Zello, and SIP2SIP | Wi-Fi and compatible audio input/output |
-| Settings | Device, Wi-Fi, portal, region, system, reset, and version control | Physical display and input |
-
-Mumble, M17, Zello, and SIP2SIP are communication services inside Walkie-ListenTalkie. The public name describes the shared listen-first, talk-when-needed product concept.
-
-## Audio targets
-
-Audio production and audio output are deliberately separate. The current target implementations are:
-
-| Target | Description |
-| --- | --- |
-| Local Audio | Sends PCM audio to the configured local I2S path, codec, amplifiers, and speakers |
-| DLNA | Discovers a renderer and sends the active source through a device-hosted network stream |
-| HTTP Stream | Exposes active audio as a stream to compatible clients on the local network |
-| FM Audio | Sends digital audio to an SI4713 FM transmitter, with optional local speaker behavior |
-
-Target availability depends on connected hardware, Wi-Fi state, and the active source.
-
-## Two device interfaces
-
-The physical display and controls are the primary everyday interface. They are intended for direct operation without requiring a phone or browser.
-
-The embedded portal is served locally by the device. It handles operations that benefit from a larger screen and keyboard:
-
-- Wi-Fi setup
-- Connected-hardware configuration
-- Mode-specific profiles
-- Configuration files
-- Language files
-- Playlists and bookmarks
-- User storage
-- System status and power operations
-
-This public website is separate from the embedded portal. It documents the product but does not control a device.
-
-## Hardware-aware design
-
-The first public hardware target is an **ESP32-S3 N16R8**: 16 MB flash and 8 MB octal PSRAM. N8 variants are not supported.
-
-Depending on the assembly, OmniRadio can use:
-
-- ST7789 display
-- Rotary encoder and buttons
-- SI4732 broadcast receiver
-- TLV320ADC3101 and other configured audio-path components
-- I2S audio output
-- Left and right speaker amplifiers
-- Microphone input
-- SI4713 FM transmitter
-- Battery monitoring
-- USB or removable file storage
-
-Hardware is treated as configuration. Features should become available only when their required devices and buses are configured successfully.
-
-## How OmniRadio is different
-
-- It is organized as one product rather than several unrelated applications.
-- Physical controls, navigation, notifications, persistence, and audio routing are shared.
-- Sources do not hard-code their output destinations.
-- Hardware variation is expected instead of hidden in one fixed schematic.
-- The physical UI remains central; the portal complements it.
-- Public HTTPS uses the maintained ESP-IDF CA bundle and hostname validation rather than service-specific certificate pinning.
-- Private device configuration stays on the device.
-- Firmware source and development artifacts remain separate from the public documentation repository.
-
-## Configuration and storage
-
-OmniRadio uses several persistence layers for different responsibilities:
-
-- **Protected device storage** for compact settings, protected values, and device-generated local TLS material
-- **Controlled configuration files** for profiles, bookmarks, playlists, and language resources
-- **External storage** for user media and recordings where supported
-- **Firmware defaults** for first boot and recovery
-
-The embedded portal exposes only supported configuration paths and formats instead of unrestricted access to the internal filesystem.
-
-## Security model
-
-- The device generates and stores its own HTTPS certificate for the local portal.
-- Outgoing public HTTPS connections use the standard ESP-IDF public CA bundle.
-- Hostname verification remains enabled for secure connections.
-- Private Mumble servers can use a user-uploaded CA file stored in LittleFS.
-- Leaf and intermediate certificates for individual internet services are not pinned in firmware.
+- Everyday operation can use the physical controls or the local browser mirror.
+- The portal is served by the ESP32-S3 itself; this public website only documents the product.
+- Device configuration remains local.
+- Public HTTPS connections use the maintained ESP-IDF CA bundle and hostname validation.
+- The local portal can use a device-generated HTTPS certificate.
 - Saved secret fields are redacted in portal responses and protected in persistent configuration where implemented.
 
-## Repository layout
+Actual capabilities always depend on feature settings, available hardware, network state, codecs, transports, and the active mode.
 
-This public repository intentionally contains only:
+## Documentation
 
-- The generated documentation site in the `gh-pages` branch
-- This project description in the `main` branch
+- [Getting Started](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/) — preparation, first boot, Wi-Fi, portal access, and navigation
+- [Firmware installation](https://uandy24.github.io/omniradio-public/firmware/) — download, USB installation, update, and recovery
+- [Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/), [Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/), and [Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/) — network listening on a bare board
+- [Walkie-ListenTalkie](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/) — Mumble, M17, Zello, and SIP2SIP
+- [Audio targets](https://uandy24.github.io/omniradio-public/targets/) — Local Audio, DLNA, HTTP Stream, and FM Audio
+- [Connected hardware](https://uandy24.github.io/omniradio-public/hardware/) — optional devices, buses, pins, and diagnostics
+- [Configuration reference](https://uandy24.github.io/omniradio-public/reference/configuration/) — feature choices, settings, files, persistence, and recovery
+- [Troubleshooting](https://uandy24.github.io/omniradio-public/troubleshooting/) — boot, hardware, radio, storage, and network problems
 
-Firmware source is maintained in a separate private repository. Public firmware distribution will be enabled only after the supported hardware profile and installation process are validated.
+## Repository and release status
 
-## Documentation status
+This public repository contains the project description, generated documentation site, and public firmware releases. Firmware source remains in a separate private development repository.
 
-The documentation is being expanded directly from the firmware implementation.
-
-Completed:
-
-1. [Getting Started before public firmware](https://uandy24.github.io/omniradio-public/start/what-is-omniradio/)
-2. [Overview and terminology](https://uandy24.github.io/omniradio-public/concepts/terminology/)
-3. [FM Radio](https://uandy24.github.io/omniradio-public/modes/fm/)
-4. [AM Radio](https://uandy24.github.io/omniradio-public/modes/am/)
-5. [SSB Radio](https://uandy24.github.io/omniradio-public/modes/ssb/)
-6. [Internet Radio](https://uandy24.github.io/omniradio-public/modes/internet-radio/)
-7. [Podcasts](https://uandy24.github.io/omniradio-public/modes/podcasts/)
-8. [Audiobooks](https://uandy24.github.io/omniradio-public/modes/audiobooks/)
-9. [Files](https://uandy24.github.io/omniradio-public/modes/files/)
-10. [Microphone](https://uandy24.github.io/omniradio-public/modes/microphone/)
-11. [File recording](https://uandy24.github.io/omniradio-public/features/file-recording/)
-12. [Walkie-ListenTalkie overview and shared behavior](https://uandy24.github.io/omniradio-public/modes/walkie-listentalkie/)
-13. [Settings](https://uandy24.github.io/omniradio-public/modes/settings/)
-14. [Audio targets and compatibility](https://uandy24.github.io/omniradio-public/targets/)
-15. [Physical UI and Canvas](https://uandy24.github.io/omniradio-public/ui/)
-16. [Embedded portal](https://uandy24.github.io/omniradio-public/portal/)
-17. [Battery and power status](https://uandy24.github.io/omniradio-public/power/)
-18. [Connected hardware](https://uandy24.github.io/omniradio-public/hardware/)
-19. [Configuration reference](https://uandy24.github.io/omniradio-public/reference/configuration/)
-20. [Wi-Fi, TLS, and security](https://uandy24.github.io/omniradio-public/security/)
-21. [Files and storage reference](https://uandy24.github.io/omniradio-public/reference/storage/)
-22. [Troubleshooting](https://uandy24.github.io/omniradio-public/troubleshooting/)
-23. [Firmware installation, update, and recovery](https://uandy24.github.io/omniradio-public/firmware/)
-
-See the [public documentation](https://uandy24.github.io/omniradio-public/) for the material available now.
+The current firmware is a **deep beta**, not a stable release. The N16R8 image layout, first installation, update, recovery, and data-preservation procedures have been validated on physical hardware. That validation covers release mechanics; it does not imply that every firmware feature is complete or stable.
