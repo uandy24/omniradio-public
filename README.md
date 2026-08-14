@@ -4,9 +4,9 @@
 
 OmniRadio brings internet radio, podcasts, audiobooks, broadcast radio, local audio, and voice communication to the ESP32-S3. Start with a bare ESP32-S3 N16R8, then add only the hardware and features you actually want.
 
-[Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/) · [Install the deep beta](https://uandy24.github.io/omniradio-public/firmware/) · [Open the GitHub prerelease](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta)
+[Read the OmniRadio documentation](https://uandy24.github.io/omniradio-public/) · [Install the deep beta](https://uandy24.github.io/omniradio-public/firmware/) · [Open the GitHub prerelease](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.159-deep-beta)
 
-> **Deep beta:** OmniRadio 0.9.154 is pre-release firmware for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Read the installation and recovery instructions before flashing.
+> **Deep beta:** OmniRadio 0.9.159 is pre-release firmware for testing and development. Expect incomplete features, defects, behavioral changes, and compatibility breaks. Read the installation and recovery instructions before flashing.
 
 ![OmniRadio FM band view](assets/fm-band-scope.webp)
 
@@ -156,7 +156,7 @@ The public build supports **ESP32-S3 N16R8**. N8 variants are not supported.
 5. Restart, join the generated `omniradio_XXXX` access point, and open the embedded portal.
 6. Add your normal Wi-Fi network and use the Device Mirror from a browser.
 
-[Download OmniRadio 0.9.154 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.154-deep-beta) · [Read the complete USB installation guide](https://uandy24.github.io/omniradio-public/firmware/usb-install/) · [Read update and recovery instructions](https://uandy24.github.io/omniradio-public/firmware/update-recovery/)
+[Download OmniRadio 0.9.159 Deep Beta](https://github.com/uandy24/omniradio-public/releases/tag/v0.9.159-deep-beta) · [Read the complete USB installation guide](https://uandy24.github.io/omniradio-public/firmware/usb-install/) · [Read update and recovery instructions](https://uandy24.github.io/omniradio-public/firmware/update-recovery/)
 
 ## One product rather than separate demos
 
