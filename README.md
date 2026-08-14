@@ -56,6 +56,29 @@ Select **HTTP Stream** as the active audio target and listen directly on the sam
 
 The same firmware can run as a headless network radio, a simple internet-radio appliance, or a fully equipped broadcast and communication device.
 
+## Listen to broadcast radio anywhere on your network
+
+Optional broadcast-radio hardware adds more than FM, AM, shortwave, and SSB controls. With an SI4732 receiver and the required digital audio-capture path, received broadcast audio becomes an OmniRadio source. Send it to:
+
+- the **Device Mirror and HTTP Stream** to listen on a computer or phone;
+- a compatible **DLNA renderer**, including a network speaker;
+- configured **Local Audio** speakers;
+- supported file recording when storage is available.
+
+```text
+FM / AM / SW / SSB receiver → OmniRadio → browser, DLNA speaker, or local speakers
+```
+
+## Play Internet Radio on an ordinary FM receiver
+
+Routing works in the other direction too. Add an SI4713 transmitter and select **FM Audio** as the target. A compatible source—such as Internet Radio, a podcast, an audiobook, a local file, or received communication audio—can then be heard on an ordinary nearby FM receiver.
+
+```text
+Internet Radio / Podcast / File → OmniRadio → SI4713 → ordinary FM receiver
+```
+
+This is the practical value of separating sources from targets: what you listen to and where you hear it are independent choices, subject to the active mode, codec, transport, and connected hardware.
+
 ## The interface follows your settings and hardware
 
 OmniRadio does not expose every function merely because its code exists in the firmware.
@@ -117,8 +140,8 @@ These choices hide features from the product interface; they do not remove their
 
 - **Local Audio** through configured I2S output and amplifiers
 - **DLNA** to a compatible renderer on the local network
-- **HTTP Stream** to the browser or another compatible LAN client
-- **FM Audio** through an optional SI4713 transmitter
+- **HTTP Stream** to the browser or another compatible LAN client—including captured FM, AM, shortwave, and SSB audio when the receiver and digital capture path are present
+- **FM Audio** through an optional SI4713 transmitter, allowing compatible network and local sources to play on an ordinary FM receiver
 
 The current firmware selects one active target at a time. Source and target remain separate: changing what you listen to does not inherently change where its audio is delivered.
 
